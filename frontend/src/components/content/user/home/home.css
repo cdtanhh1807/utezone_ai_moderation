@@ -1,0 +1,21 @@
+.Home {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+
+}
+
+.middleSide {
+  flex: 7;
+    background-color: rgb(250 250, 250);
+}
+
+.rightSide {
+  flex: 3;
+    background-color: rgb(250 250, 250);
+}

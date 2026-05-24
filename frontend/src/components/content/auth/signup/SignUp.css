@@ -1,0 +1,127 @@
+/* SignUp.css */
+/* Container chính chia 2 cột */
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Bên trái chứa hình ảnh */
+.signup-left {
+    width: 600px;
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.signup-left .signup-image {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.signup-logo-image{
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Bên phải chứa form */
+.signup-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.signup-right form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-right input {
+    width: 300px;
+    height: 18px;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+
+.signup-btn {
+    padding: 12px 15px;
+    font-size: 16px;
+    width: 334px;
+    height: 40px;
+    background-color: #0a4ca1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+    margin-left: 30px;
+}
+
+.signup-btn:hover {
+    background-color: #155db2;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-link a {
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive nhỏ hơn 768px thì xếp dọc */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+    }
+
+    .signup-left, .signup-right {
+        flex: none;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .signup-left .signup-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .signup-right {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,49 @@
+.appealContainer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.appealModal {
+  background: #fff;
+  width: 450px;
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeIn 0.2s ease;
+}
+
+.appealModal textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  margin-top: 10px;
+  resize: vertical;
+}
+
+.appealActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  gap: 10px;
+}
+.appealTextarea{
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 430px;
+}
+
+.btn-cancel {
+  background: #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+}

@@ -1,0 +1,59 @@
+.dept-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.dept-modal-content {
+  width: 620px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dept-modal-header {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.dept-modal-body {
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.dept-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dept-item:hover {
+  background: #f5f5f5;
+}
+
+.dept-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dept-name {
+  font-weight: 500;
+}
+
+.dept-email {
+  font-size: 12px;
+  color: gray;
+}

@@ -1,0 +1,188 @@
+.profileHeader {
+  display: flex;
+  gap: 90px;
+  padding: 20px 40px;
+  padding-bottom: 0px;
+  border-radius: 12px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 890px;
+}
+
+/* Avatar */
+.header-imageDIv {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* khung tròn */
+  padding: 5px;
+  border: 3px solid red;
+  overflow: hidden; /* chặn tràn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.profile-avatar {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ảnh luôn hiển thị đầy đủ */
+  background: white;
+}
+
+
+
+/* Thông tin tổng thể */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Hàng username + button */
+.profile-username-time {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-username {
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.btn-edit-profile,
+.btn-follow,
+.btn-message {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.dot-btn-message {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 7px;
+  font-weight: 600;
+  transition: 0.2s ease;
+
+  background: transparent;
+  outline: none;
+}
+
+/* khi đang nhấn */
+.dot-btn-message:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* khi được focus (click, tab, giữ chuột) */
+.dot-btn-message:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.btn-edit-profile:hover{
+  background-color: #f5efef
+}
+
+.btn-follow {
+  background-color: #0095f6;
+  color: white;
+}
+
+.btn-follow:hover {
+  background-color: #007ad9;
+}
+
+.btn-message {
+  background-color: #efefef;
+  color: #333;
+}
+
+.btn-message:hover {
+  background-color: #e0e0e0;
+}
+
+.profile-overview {
+  display: flex;
+  gap: 20px;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.count {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.label {
+  font-size: 14px;
+    color:rgb(45, 150, 211) ;
+}
+.profile-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+.full-name {
+  font-weight: 600;
+}
+.bio {
+  font-size: 14px;
+  font-style: italic;
+  display: block;   
+  max-width: 530px;   
+  word-wrap: break-word; 
+  white-space: normal;
+}
+/* ===== MENU 3 CHẤM ===== */
+.account-menu {
+  position: absolute;
+  top: 42px;              /* nằm dưới nút 3 chấm */
+  right: 0;
+  min-width: 180px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* ===== ITEM TRONG MENU ===== */
+.menu-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* hover thường */
+.menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* ===== ITEM NGUY HIỂM ===== */
+.menu-item.danger {
+  color: #e53935;
+}
+
+.menu-item.danger:hover {
+  background-color: #ffecec;
+}

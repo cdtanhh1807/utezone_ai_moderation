@@ -1,0 +1,189 @@
+.leftSidePart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 13%;
+  border-right: 1px solid #999999;
+  background-color: rgb(250 250, 250);
+}
+
+.logoPart {
+ width: 170px;
+ height: 60px;
+ margin-left: 10px;
+}
+
+.navLinkPart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  margin-left: 28px;
+
+
+}
+.navLink {
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  height: 30px;
+  padding: 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: #ededed;
+    border-radius: 8px;
+  }
+}
+.navName {
+  font-weight: 500;
+  padding-left: 10px;
+}
+.bellowPart {
+  position: absolute;
+  bottom: 20px;
+}
+.createMenuDropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  border-radius: 12px;
+  width: 180px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.35);
+  z-index: 9999;
+}
+
+.createItem {
+  display: flex;                  /* thêm flex để text và icon cùng hàng */
+  align-items: center;            /* căn giữa theo chiều dọc */
+  justify-content: space-between; /* text bên trái, icon sát phải */
+  padding: 12px 16px;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.createItem:hover {
+  background: rgba(255,255,255,0.12); /* giữ nguyên màu hover */
+}
+
+
+.createItem svg {
+  margin-left: 8px;
+}
+
+.sidebar-relations-container {
+  margin-top: 20px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.side-rel-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-rel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.side-rel-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #65676b;
+  text-transform: uppercase;
+}
+
+.side-rel-arrow {
+  font-size: 14px !important;
+  color: #1877f2;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.side-rel-arrow:hover {
+  transform: scale(1.2);
+}
+
+.side-rel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.side-rel-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.side-rel-item:hover {
+  background-color: #f0f2f5;
+}
+
+.side-rel-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.side-rel-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #050505;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.side-rel-empty {
+  font-size: 12px;
+  color: #90949c;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+.side-divider {
+  height: 1px;
+  background-color: #ebedf0;
+  margin: 5px 10px;
+}
+
+.expandMenu {
+  position: absolute;
+  bottom: 50px; /* hoặc top: 100% nếu muốn xổ xuống */
+  left: 0;
+
+  width: 200px;
+  background: white;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 8px 0;
+
+  z-index: 999;
+}
+
+.menuItem {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menuItem:hover {
+  background: #f5f5f5;
+}

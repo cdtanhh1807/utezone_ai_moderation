@@ -1,0 +1,73 @@
+/* ==== LIST LAYOUT ==== */
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 10px;
+}
+
+
+/* ==== USER CARD ==== */
+.user-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+    padding: 6px 15px;
+    border-radius: 30px;
+    border: 1px solid #e5e7eb;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.user-card:hover {
+    background: #f7f7f7;
+    transform: translateY(-2px);
+}
+
+
+/* ==== USER LEFT INFO ==== */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.user-text h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user-text p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ==== FOLLOW BUTTON ==== */
+.follow-btn {
+    padding: 7px 14px;
+    background: #1877f2;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.follow-btn:hover {
+    background: #0e63d6;
+}

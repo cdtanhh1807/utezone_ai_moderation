@@ -1,0 +1,246 @@
+.headerSide {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px; /* chiều cao header */
+  width: 100%;
+  padding: 0 20px;
+  background-color: rgb(246, 246, 248);;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 10;
+  font-family: 'Instagram Sans', sans-serif;
+}
+
+/* Logo bên trái */
+.header-left {
+  flex: 0.2;  
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto; /* cố định kích thước */
+}
+
+.logoPart {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 100px; /* chỉnh lại phù hợp header 60px */
+  width: auto;
+}
+
+/* Trung tâm - search */
+.header-center {
+  flex: 0.6;
+  flex: 1 1 auto; /* chiếm phần còn lại */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header bên phải */
+.header-right {
+  flex: 0.2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 0 0 auto; /* cố định kích thước */
+}
+
+/* Avatar và tên */
+.rightSide-postInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rightSide-postInfoImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightSide-postInfoName {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.user-container {
+  position: relative;
+}
+
+.notification{
+  position: relative;
+    cursor: pointer;
+  margin-top: 10px;
+}
+
+.user-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 140px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 20;
+}
+
+.user-menu.show {
+  display: flex;
+}
+
+.user-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.user-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.user-menu a.logout {
+  color: red;
+}
+
+/* Header-center search */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 720px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 5px 10px;
+  transition: all 0.2s ease;
+  margin-left: 200px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.search-bar input::placeholder {
+  color: #999;
+}
+
+.search-bar .search-icon {
+  color: #999;
+  font-size: 20px;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #ccc;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.rightSide {
+  padding: 10px;
+  display: flex;
+  align-items: flex-start; /* căn trái */
+  gap: 20px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Thông tin người dùng (avatar + username) */
+.rightSide-postInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.rightSide-postInfoImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* làm tròn avatar */
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.rightSide-postInfoName {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Container icon + menu */
+.user-container {
+  position: relative; /* để menu con định vị tuyệt đối */
+}
+
+/* Icon menu */
+.user-icon {
+  cursor: pointer;
+  font-size: 28px;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Menu dropdown ẩn mặc định */
+.user-menu {
+  position: absolute;
+  top: 40px; /* cách icon 1 đoạn */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 150px;
+  display: none; /* ẩn mặc định */
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Khi click icon (menuOpen = true) */
+.user-menu.show {
+  display: flex;
+}
+
+/* Các link menu */
+.user-menu a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.user-menu a:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Logout riêng */
+.user-menu .logout {
+  color: red;
+}
+
+

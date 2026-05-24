@@ -1,0 +1,90 @@
+.conv-list-container {
+  width: 220px;
+  border-right: 1px solid #e5e5e5;
+  overflow-y: auto;
+  background: #fafafa;
+}
+
+.conv-item {
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+  min-height: 35px;
+}
+.message_header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-weight: 600;
+}
+.conv-item:hover {
+  background: #f0f7ff;
+}
+
+.conv-item.active {
+  background: #dceeff;
+}
+
+.conv-row {
+  display: flex;
+  align-items: center;
+}
+
+.conv-name {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.new-msg .conv-name {
+  font-weight: 700;
+}
+
+.conv-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff3b30;
+  border-radius: 50%;
+  margin-left: 6px;
+}
+
+.conv-last-msg {
+  font-size: 13px;
+  color: #666;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 48px;
+}
+.btn-add-mesage {
+    background-color: #fafafa; /* màu nền tùy ý */
+    color: #0c0101; /* màu chữ */
+    border: none; /* tắt viền */
+    outline: none; /* tắt outline khi focus */
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+/* Hover */
+.btn-add-mesage:hover {
+    background-color: white; /* màu tối hơn khi hover */
+}
+
+/* Active (nhấn) */
+.btn-add-mesage:active {
+    transform: scale(0.98); /* hiệu ứng nhấn nhẹ */
+}
+
+/* Focus (tab vào) */
+.btn-add-mesage:focus {
+    outline: none;
+    box-shadow: none;
+}
+

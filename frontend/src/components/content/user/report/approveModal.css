@@ -1,0 +1,61 @@
+.approveModalContainer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.approveModal {
+  width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeIcon {
+  cursor: pointer;
+}
+
+.infoRow {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.actionSection {
+  margin-top: 15px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.cancelBtn {
+  background: #ccc;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.submitBtn {
+  background: #0066ff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}

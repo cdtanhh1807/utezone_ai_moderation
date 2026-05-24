@@ -1,0 +1,39 @@
+.trim-container {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  background: #dcdcdc;
+  border-radius: 6px;
+}
+
+.trim-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+}
+
+.trim-selected {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: rgba(79, 70, 229, 0.35);
+  border: 2px solid #4f46e5;
+  box-sizing: border-box;
+}
+
+.trim-handle {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: #4f46e5;
+  cursor: ew-resize;
+}
+
+.trim-handle.left {
+  left: 0;
+}
+
+.trim-handle.right {
+  right: 0;
+}

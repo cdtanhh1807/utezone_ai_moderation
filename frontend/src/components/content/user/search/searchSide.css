@@ -1,0 +1,135 @@
+.searchSide {
+  flex: 1;
+    overflow-y: auto; /* Quan trọng */
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.search-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    max-width: 1200px;
+}
+
+.search-title span {
+    color: #4a90e2;
+}
+
+.search-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-tabs button {
+    padding: 8px 16px;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.search-tabs .active {
+    background: #f2f3f5;
+    border: white;
+}
+
+.search-content {
+      flex-grow: 1;
+    overflow: visible;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    min-height: 100vh;
+}
+
+
+/* ---- Posts ---- */
+.post-card {
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: white;
+}
+
+/* ---- Users ---- */
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* ---- Groups ---- */
+.group-card {
+    padding: 15px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* ---- Date Filter ---- */
+.search-date-filter {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+/* Ẩn radio gốc */
+.search-date-filter input[type="radio"] {
+  display: none;
+}
+
+/* Style label để highlight khi chọn */
+.search-date-filter label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.search-date-filter label span {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  transition: all 0.2s;
+}
+
+/* Khi radio được chọn, đổi màu xanh */
+.search-date-filter input[type="radio"]:checked + span {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Ô chọn ngày */
+.search-date-filter input[type="date"] {
+  padding: 2px 5px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  transition: all 0.2s;
+}
+
+/* Highlight khi đang chọn ô custom */
+.search-date-filter input[type="date"].active {
+  border-color: #007bff;
+}

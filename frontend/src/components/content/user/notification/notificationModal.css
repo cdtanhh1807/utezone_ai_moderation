@@ -1,0 +1,144 @@
+/* Container để click ra ngoài là đóng */
+.notificationContainer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
+
+/* Modal nằm ngay phía dưới icon chuông */
+.notificationModal {
+  position: absolute;
+  top: 60px; 
+  right: 20px; 
+  width: 350px;
+  max-height: 500px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.2s ease;
+
+  overflow-y: scroll; /* cho phép scroll theo chiều dọc */
+  scrollbar-width: none; /* Firefox: ẩn scrollbar */
+}
+
+/* Chrome, Edge, Safari */
+.notificationModal::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* ẩn scrollbar */
+}
+
+
+/* Danh sách thông báo */
+/* Ẩn thanh cuộn Chrome, Safari, Edge */
+.notificationList::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Ẩn thanh cuộn Firefox */
+.notificationList {
+  scrollbar-width: none;
+}
+
+/* Ẩn thanh cuộn IE & Edge Legacy */
+.notificationList {
+  -ms-overflow-style: none;
+}
+
+
+/* Item thông báo */
+.notificationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.notificationItem:hover {
+  background: #f5f5f5;
+}
+
+/* Avatar người gửi */
+.notificationAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Nội dung thông báo */
+.notificationContent {
+  flex: 1;
+}
+
+.notificationContent p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.notificationContent span {
+  font-size: 12px;
+  color: gray;
+  margin-top: 2px;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.systemModalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.systemModalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.systemModalTitle {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.systemModalBody {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.systemModalFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.systemModalFooter button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #1976d2;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.systemModalFooter button:hover {
+  background-color: #115293;
+}
+

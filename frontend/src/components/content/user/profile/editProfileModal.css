@@ -1,0 +1,193 @@
+/* ===== BACKDROP (NỀN MỜ) ===== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.25s ease;
+}
+
+/* ===== MODAL ===== */
+.modal-container {
+  width: 440px;
+  height: 800px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  position: relative;
+  scrollbar-width: none; 
+}
+.modal-container::-webkit-scrollbar {
+  display: none;              /* Chrome, Edge, Safari */
+}
+
+.modal-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+/* ===== FIELD ===== */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-right: 22px;
+}
+
+.edit-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border 0.25s, background-color 0.25s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #0095f6;
+  box-shadow: 0 0 5px rgba(0, 149, 246, 0.5);
+  background-color: #ffffff;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 70px;
+  max-height: 160px;
+}
+
+/* word counter */
+.field small {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  margin-top: -4px;
+}
+
+/* ===== AVATAR SECTION ===== */
+.edit-postInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-postInfoImg {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.btn-change-avatar {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+  border: none;
+  background: #0095f6;
+  color: #fff;
+  margin-left: 160px
+}
+
+.btn-change-avatar:hover {
+  background: #007ed6;
+}
+
+/* ===== BUTTONS ===== */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-cancel,
+.btn-save {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+  border: none;
+}
+
+/* Cancel */
+.btn-cancel {
+  background: #eee;
+}
+
+.btn-cancel:hover {
+  background: #ddd;
+}
+
+/* Save */
+.btn-save {
+  background: #0095f6;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #007ed6;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.field select {
+  width: 106%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border 0.25s, background-color 0.25s;
+}
+
+.field select:focus {
+  border-color: #0095f6;
+  box-shadow: 0 0 5px rgba(0, 149, 246, 0.5);
+  background-color: #fff;
+}

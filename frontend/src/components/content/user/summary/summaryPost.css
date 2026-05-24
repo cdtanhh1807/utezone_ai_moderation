@@ -1,0 +1,68 @@
+.summary-box {
+  position: fixed;
+  top: 150px;
+  left: 200px;
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: white;
+  padding: 10px 14px;
+  cursor: move;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: 600;
+  border-bottom: 1px solid #1877f2;
+  height:30px; 
+}
+
+.summary-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.summary-content {
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.ai-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.ai-avatar{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  position:absolute;
+  top:-60px;      /* avatar nổi lên trên */
+  left:-40px;     /* lệch sang trái */
+  animation: ai-bounce 2s infinite;
+  pointer-events:none;
+}
+.ai-name{
+  font-size:18px;
+  font-weight:600;
+  color:#36b4ee;
+  margin-left: 50px;
+}
+@keyframes ai-bounce{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-3px)}
+  100%{transform:translateY(0)}
+}

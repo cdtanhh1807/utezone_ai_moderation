@@ -1,0 +1,33 @@
+.tab-content-post {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 10px;
+  margin-left: 50px;
+}
+
+/* Không có bài */
+.no-post {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.search-end {
+  text-align: center;
+  padding: 30px 0;
+  color: #666;
+  margin-right: 550px;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1877f2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  text-decoration: underline;
+}

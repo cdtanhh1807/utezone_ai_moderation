@@ -1,0 +1,31 @@
+uvicorn[standard]
+fastapi
+motor
+pymongo
+python-jose[cryptography]
+passlib==1.7.4
+bcrypt==4.0.1
+redis
+requests
+pydantic[email]
+rapidfuzz
+pytz
+minio
+python-multipart
+aiohttp
+playwright>=1.40.0
+beautifulsoup4>=4.12.0
+python-dateutil>=2.8.0
+lxml
+httpx
+
+#ai scan post
+imageio-ffmpeg
+python-docx
+PyPDF2
+
+#ai meet
+openrouter
+httpx
+
+#nhớ run thêm: playwright install

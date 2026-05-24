@@ -1,0 +1,271 @@
+/* --- 1. Scoped Variables --- */
+/* Thay :root bằng .ute-container để biến chỉ có hiệu lực bên trong trang này */
+.ute-container {
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --bg-color: #F8FAFC;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --white: #FFFFFF;
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+               0 4px 6px -2px rgb(0 0 0 / 0.05);
+  --glow-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Mang các thuộc tính của body vào đây */
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+
+  /* Đảm bảo chiếm trọn màn hình mà không ảnh hưởng body toàn cục */
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  /* ✅ THAY NỀN TRẮNG BẰNG ẢNH */
+  background-image: url("/images/bg_truong.jpg");
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay làm dịu ảnh nền (không ảnh hưởng layout) */
+.ute-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 0;
+}
+
+/* --- 2. Local Reset --- */
+/* Chỉ reset box-sizing cho các phần tử bên trong .ute-container */
+.ute-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 3. Background Grid --- */
+.ute-container .bg-grid-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* --- 4. Header (Scoped) --- */
+.ute-container .ute-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* --- Các class khác giữ nguyên --- */
+.ute-container .ute-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+.ute-container .logo-icon {
+  color: var(--primary);
+  display: flex;
+}
+
+.ute-container .ute-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ute-container .btn-ghost {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ute-container .btn-ghost:focus,
+.ute-container .btn-ghost:active,
+.ute-container .btn-ghost:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.ute-container .btn-primary-sm {
+  background: var(--text-main);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hero Section */
+.ute-container .ute-main {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 1rem 4rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.ute-container .hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  border-radius: 99px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.ute-container .hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.ute-container .highlight-text {
+  background: linear-gradient(135deg, var(--primary) 0%, #4F46E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ute-container .hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.ute-container .hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* Buttons */
+.ute-container .btn-primary-lg,
+.ute-container .btn-secondary-lg {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 99px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ute-container .btn-primary-lg {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  box-shadow: var(--glow-shadow);
+}
+
+.ute-container .btn-secondary-lg {
+  background: var(--white);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+/* Features */
+.ute-container .hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.ute-container .feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.ute-container .feature-icon {
+  display: flex;
+  padding: 10px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.ute-container .ute-footer {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: auto;
+  background-color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ute-container .hero-title {
+    font-size: 2.5rem;
+  }
+  .ute-container .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .ute-container .hero-features {
+    display: none;
+  }
+}

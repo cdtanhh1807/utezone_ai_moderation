@@ -1,0 +1,277 @@
+.storyModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Nút Bỏ qua nhạc */
+.skipMusicBtn {
+  margin-left: 8px;
+  padding: 4px 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skipMusicBtn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.skipMusicBtn:active {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: scale(0.95);
+}
+
+.storyModalContent {
+  position: relative;
+  width: 95%;
+  max-width: 700px;
+  height: 90vh;
+  background-color: #000;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.musicProgressWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.25);
+  z-index: 20;
+}
+
+.musicProgressFill {
+  height: 100%;
+  background: white;
+  transition: width 0.15s linear;
+}
+
+.storyHeader {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 25;
+}
+
+.storyHeader .avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.storyHeader .username {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.musicControls {
+  margin-left: auto;
+  margin-right: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.musicControls button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.storyMenuWrapper {
+  position: relative; /* Nút 3 chấm là relative */
+}
+
+.storyMenuDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff; /* nền trắng */
+  color: black;           /* chữ mặc định đen */
+  border-radius: 8px;
+  padding: 4px 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  margin-right: 20px;
+  height: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.storyMenuDropdown button {
+  background: transparent;
+  border: none;
+  color: black;          /* chữ màu đen */
+  padding: 6px 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.storyMenuDropdown button:hover {
+  background-color: rgba(0,0,0,0.05); /* hover nhẹ để nổi menu */
+}
+
+
+.pause-headerBtn,
+.volume-headerBtn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.storyMedia {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.storyMedia img,
+.storyMedia video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Emote popover đặt ngoài storyMedia */
+.sm-emote-popover {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 100;
+  pointer-events: auto;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.sm-emote-popover span {
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sm-emote-popover span:hover {
+  transform: scale(1.4);
+}
+
+.storyControls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.storyControls button {
+  pointer-events: auto;
+  background-color: rgba(255,255,255,0.2);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #e6dbdb;
+  font-size: 20px;
+  transition: background 0.3s;
+  margin-right: 20px;
+}
+
+.storyControls button:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.s-nav-left, .s-nav-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(14,13,13,0.3);
+  color: white;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.s-nav-left:hover, .s-nav-right:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+.s-nav-left { left: 10px; }
+.s-nav-right { right: 10px; margin-right: 20px;}
+
+.s-nav-left,
+.s-nav-right {
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+
+/* THUMBNAILS */
+.thumbnail-bar {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+  width: 100%;
+}
+

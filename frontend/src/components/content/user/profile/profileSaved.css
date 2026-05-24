@@ -1,0 +1,191 @@
+.saved-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-right: 510px;
+}
+
+/* COLLECTION WRAPPER */
+.collection {
+  margin-bottom: 25px;
+}
+
+.collection-title {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* GRID giống archive */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 0 10px;
+}
+
+/* ITEM */
+.collection-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.collection-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.collection-item:hover img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY DATE */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 6px;
+  font-size: 12px;
+  color: white;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    transparent
+  );
+}
+
+/* 3 chấm collection */
+.dots {
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+  padding: 4px;
+  background-color: transparent;
+}
+
+/* =========================
+   POST 3 DOTS (IMPORTANT FIX)
+   ========================= */
+
+.post-dots {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  z-index: 10;
+
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: 0.2s;
+}
+
+/* show on hover */
+.collection-item:hover .post-dots {
+  opacity: 1;
+}
+
+/* =========================
+   MENU DROPDOWN
+   ========================= */
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 28px;
+  color: black;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  font-size: 15px;
+  z-index: 999;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu div {
+  padding: 2px;
+  cursor: pointer;
+}
+
+.menu div:hover {
+  background: #f5f5f5;
+  color: rgb(19, 151, 240);
+}
+.collection-title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px;
+}
+
+.collection-dots-inline {
+  position: relative;
+  cursor: pointer;
+
+  font-size: 18px;
+  padding: 2px 6px;
+
+  border-radius: 6px;
+}
+
+.collection-dots-inline:hover {
+  background: #f2f2f2;
+}
+.rename-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.rename-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rename-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.rename-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

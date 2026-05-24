@@ -1,0 +1,153 @@
+/* Container chính chia 2 cột */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Bên trái chứa hình ảnh */
+.login-left {
+    width: 600px;
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.login-left .login-image {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+.login-utezone-image{
+    width: 250px;
+}
+
+/* Bên phải chứa form */
+.login-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.login-right h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.login-right form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-right input {
+    width: 300px;
+    height: 18px;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-left: 30px
+}
+
+.login-btn {
+    padding: 12px 15px;
+    font-size: 16px;
+    width: 334px;
+    height: 40px;
+    background-color: #0a4ca1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+    margin-left: 30px
+}
+
+.login-btn:hover {
+    background-color: #155db2;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.login-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.login-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: black;   
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.password-wrapper{
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input{
+  width: 100%;
+  padding-right: 45px;
+  max-width: 270px;
+}
+
+.toggle-password{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  margin-right: 30px;
+}
+/* Responsive nhỏ hơn 768px thì xếp dọc */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-left, .login-right {
+        flex: none;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .login-left .login-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .login-right {
+        padding: 20px;
+    }
+}

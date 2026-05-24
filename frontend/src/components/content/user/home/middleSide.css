@@ -1,0 +1,623 @@
+.middleHomeSide {
+  width: 100%;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250 250, 250);
+  overflow-y: auto;
+}
+
+.storyBlock {
+  width: 650px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow-x: auto;
+  border-radius: 10%;
+  margin-right: 100px;
+}
+.storyBlock::-webkit-scrollbar {
+  display: none;
+}
+.storyPaticular {
+  width: 70px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.imageDIv {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* làm tròn khung */
+  padding: 2px;
+  border: 2px solid red;
+  overflow: hidden; /* quan trọng để ảnh không bị vươn ra */
+}
+.imageDIv-add {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* làm tròn khung */
+  padding: 2px;
+  border: 2px solid rgb(248, 246, 246);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.statusImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* giữ tỉ lệ ảnh, cắt phần thừa */
+  border-radius: 50%; /* làm tròn ảnh */
+}
+/* ADD STORY */
+.addStory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc; /* phân biệt với story thường */
+  background-color: #f5f5f5;
+}
+
+.plusIcon {
+  font-size: 32px;
+  font-weight: 300;
+  color: #272525;
+  line-height: 1;
+}
+
+
+.profileName {
+  font-size: 12px;
+  white-space: nowrap;      /* Không xuống dòng */
+  overflow: hidden;         /* Ẩn phần vượt ra ngoài */
+  text-overflow: ellipsis;  /* Hiển thị ... nếu quá dài */
+  max-width: 100px;         /* Giới hạn chiều rộng (tùy chỉnh theo layout) */
+}
+.storyHome{
+  margin-right: 600px;
+}
+
+  /* .postSection {
+    width: 70%;
+    margin-top: 40px;
+    max-width: 700px;
+    margin-right: 150px;
+  }
+  .post {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .postInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+  }
+  .postInfoName{
+    font-size: 16px;
+    font-weight: bold;
+  }
+.postInfoImg {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+}
+.timingInfo {
+  color: #999999;
+  font-size: 14px;
+}
+.postImg {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #000;
+}
+
+
+.postSlider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.35s ease;
+}
+
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.postImage,
+.postVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dots-post {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot-post {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 4px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+.postVideo {
+  width: 100%;     
+  height: auto;     
+  border-radius: 10px;
+  display: block;   
+  max-height: 500px;
+  object-fit: cover; 
+}
+
+.iconBlock {
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.leftIcon {
+  display: flex;
+}
+
+.likeSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 10px;
+}
+
+.imageLike {
+  position: relative;
+  width: 35px;
+  height: 20px;
+}
+
+.likeImg,
+.likeImg2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+}
+.likeImg {
+  left: 0;
+}
+.likeImg2 {
+  left: 13px;
+}
+
+.numberOfLikes {
+  font-size: 14px;
+  font-weight: 600;
+  position: static;
+  margin-left: 0;
+} */
+
+
+/* .viewComment {
+  width: 100%;
+  font-size: 14px;
+  color: #999999;
+  cursor: pointer;
+  margin-top: 5px;
+  text-align: left; 
+  align-self: flex-start;
+}
+.postContent {
+  width: 100%;
+  font-size: 15px;
+  margin: 0px 0;
+  text-align: left; 
+  align-self: flex-start;
+}
+
+.commentSection {
+  width: 100%;
+  margin-top: 0px;
+}
+
+.commentBox:focus {
+  border-color: #007bff;
+}
+
+.commentCount {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
+.emojiWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.emojiPickerContainer {
+  position: absolute;
+  bottom: 100%;     
+  left: 3px;      
+  margin-bottom: 6px; 
+  z-index: 1000;   
+}
+
+.commentInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px;
+  background-color: #fff;
+}
+
+.commentBox {
+  flex: 1;           
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+  background-color: transparent;
+  resize: none;             
+  overflow-y: auto;          
+  white-space: pre-wrap;     
+}
+
+.commentBox:focus {
+  border-color: #007bff;
+}
+
+.commentBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.commentBtn:hover {
+  background-color: #0056b3;
+}
+
+.commentOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.commentModal {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  width: 1300px;  
+  height: 800px;
+  overflow: hidden;
+}
+
+.commentModalLeft {
+  flex: 1;
+  background-color: black;
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+}
+
+.modalImage {
+  max-width: 100%;  
+  max-height: 100%; 
+  object-fit: contain; 
+}
+
+.commentModalRight {
+  width: 500px; 
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ddd;
+  padding: 15px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalComments {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+  font-size: 14px; 
+}
+
+/* .modalInput {
+  display: flex;
+  margin-top: 10px;
+}
+
+.modalInput input {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+}
+
+.modalInput button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.modalInput button:hover {
+  background: #0056b3;
+}
+
+.closeModal {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.comment-card {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+}
+
+.comment-username {
+  font-weight: 600;
+}
+
+.comment-content {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.comment-reacts {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.react-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.no-comment {
+  color: #777;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comment-card {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  height: auto;
+  border-radius: 12px;
+  background-color: white;
+  align-items: flex-start;
+}
+
+.comment-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-body {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  margin-bottom: 4px;           
+  font-size: 0.85rem;         
+  color: #555;                 
+}
+
+.comment-username {
+  font-weight: 600;               
+  color: #222;                
+}
+
+.comment-time {
+  font-size: 0.75rem;          
+  color: #888;                    
+  font-style: italic;         
+}
+
+.comment-content {
+  font-size: 13px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.comment-reacts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.react-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  padding: 0;
+}
+.like-container {
+  position: relative;
+  display: inline-block;
+}
+
+.emote-popover {
+  position: absolute;
+  bottom: 100%;   
+  left: 0;
+  background: #fff;
+  border-radius: 24px;
+  padding: 4px 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.emote-popover span {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emote-popover span:hover {
+  transform: scale(1.3);
+}
+.react-btn.active-love {
+  color: red;
+}
+.react-btn.active-like {
+  color: blue;
+}
+.react-btn.active-haha {
+  color: orange;
+}
+.react-btn.active-sad {
+  color: gray;
+}
+.postMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.menuDropdown {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  width: 180px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.menuItem {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.menuItem:hover {
+  color: red;
+}
+
+.optionPost {
+  margin-left: auto;    
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionPost:hover,
+.optionPost:focus,
+.optionPost:active {
+  background: none !important; 
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.countReact-Post {
+  cursor: pointer;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.countReact-Comment {
+  cursor: pointer;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+*/

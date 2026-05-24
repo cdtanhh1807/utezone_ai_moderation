@@ -1,0 +1,210 @@
+.rightSide {
+   flex-shrink: 0;
+}
+
+/* ================= FLOATING RIBBON ================= */
+.floating-ribbon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  right: 20px;
+  bottom: 1px;
+  padding: 1px 2px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  background-color: transparent;
+  position: fixed;
+}
+
+/* Logo */
+.floating-ribbon img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Badge số */
+.chat-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+
+  min-width: 5px;
+  height: 20px;
+  padding: 0 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  margin-top: 60px;
+  margin-right: 60px;
+  border: 2px solid white;
+}
+/* Gấp mép ruy băng */
+.floating-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 12px;
+  height: 100%;
+  background: rgba(0,0,0,0.15);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.floating-ribbon:hover {
+  transform: translateY(-5px);
+}
+
+.floating-ribbon:focus,
+.floating-ribbon:active,
+.floating-ribbon:focus-visible {
+  outline: none;
+  border: none;
+}
+
+/* ================= CHAT ================= */
+.chat-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* ================= SUGGEST POST (NHẸ – KHÔNG FIXED) ================= */
+.right-feed {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+  width: 339px;
+  z-index: 9;
+  margin-top: 100px;
+}
+
+
+
+.feed-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ================= POST CARD ================= */
+.feed-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.feed-card:last-child {
+  margin-bottom: 0;
+}
+
+/* ================= POST HEADER ================= */
+.feed-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feed-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.page-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.time {
+  font-size: 11px;
+  color: #888;
+}
+
+/* ================= POST BODY ================= */
+.feed-body {
+  margin-top: 6px;
+}
+
+.post-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.post-summary {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ================= POST FOOTER ================= */
+.feed-footer {
+  margin-top: 6px;
+  text-align: right;
+}
+
+.btn-view {
+  padding: 4px 10px;
+  font-size: 12px;
+  background-color: rgb(249, 249, 249);
+  color: rgb(19, 11, 138);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= CŨ – GIỮ LẠI ================= */
+.suggest-user-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+}
+
+.suggest-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-text h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: rgb(249, 249, 249);
+  border: none;
+  border-radius: 6px;
+  color: rgb(19, 11, 138);
+  cursor: pointer;
+  font-size: 14px;
+}

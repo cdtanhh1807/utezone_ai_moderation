@@ -1,0 +1,161 @@
+.rp-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+}
+
+/* Container modal */
+.report-modal-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 500px;
+  padding: 20px 25px;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.report-modal-container h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* Description text */
+.report-modal-container p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Radio buttons list */
+.report-modal-container .report-policies,
+.report-modal-container .report-actions {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.report-modal-container label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.report-modal-container input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #1a73e8; /* màu xanh cho radio */
+}
+
+/* Custom input */
+.report-modal-container .custom-reason input {
+  width: 100%;
+  padding: 6px 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Link trong modal */
+.report-modal-container a {
+  color: #1a73e8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Footer buttons */
+.report-modal-container .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.report-modal-container .modal-footer button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Cancel button */
+.report-modal-container .modal-footer button.cancel-btn {
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+.report-modal-container .modal-footer button.cancel-btn:hover {
+  background-color: #d4d4d4;
+}
+
+/* Submit button */
+.report-modal-container .modal-footer button.submit-btn {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.report-modal-container .modal-footer button.submit-btn:hover {
+  background-color: #155ab6;
+}
+
+.report-modal-container .modal-footer button.submit-btn:disabled {
+  background-color: #8ab4f8;
+  cursor: not-allowed;
+}
+/* ITEM chứa từng policy */
+.policy-item {
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f7f9fc;
+  border: 1px solid #e3e6ea;
+}
+
+/* Phần tiêu đề của policy */
+.policy-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.policy-header input[type="radio"] {
+  margin: 0;
+}
+
+/* Mô tả nằm bên dưới */
+.policy-description {
+  font-size: 0.9rem;
+  color: #555;
+  padding-left: 26px;
+  line-height: 1.4;
+}
+
+/* Ẩn thanh cuộn trong modal */
+.report-modal-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.report-modal-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+}
