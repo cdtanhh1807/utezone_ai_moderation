@@ -408,6 +408,35 @@ async def get_messages(room_id: str, limit: int = 50, before: Optional[str] = No
     return {"messages": messages}
 
 
+@router.delete("/messages/{message_id}")
+async def delete_message_by_owner(
+    message_id: str,
+    current_user: dict = Depends(get_current_user)
+):
+    email = current_user["sub"]
+
+    result = await channel_service.delete_message_by_owner(
+        message_id=message_id,
+        owner_email=email
+    )
+
+    if not result.get("success"):
+        raise HTTPException(status_code=400, detail=result.get("error"))
+
+    await ws_manager.broadcast(result["channel_id"], {
+        "type": "message_removed",
+        "message_id": result["message_id"],
+        "room_id": result["room_id"],
+        "user_email": email,
+        "reason": "Tin nhắn đã bị chủ channel xóa"
+    })
+
+    return {
+        "success": True,
+        "message": "Đã xóa tin nhắn",
+        "message_id": result["message_id"]
+    }
+
 # ==================== USER SESSION ====================
 
 @router.post("/session/set")

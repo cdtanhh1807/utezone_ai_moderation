@@ -566,5 +566,55 @@ class ChannelService:
             "expire_at": {"$gt": datetime.now()}
         })
         return muted is not None
+    
+    async def get_message_by_id(self, message_id: str) -> Optional[dict]:
+        data = await self.messages_col.find_one({"message_id": message_id})
+        if data:
+            data.pop("_id", None)
+            return data
+        return None
+
+
+    async def delete_message_by_owner(self, message_id: str, owner_email: str) -> dict:
+        message = await self.get_message_by_id(message_id)
+
+        if not message:
+            return {
+                "success": False,
+                "error": "Tin nhắn không tồn tại"
+            }
+
+        channel_id = message.get("channel_id")
+        channel = await self.get_channel(channel_id)
+
+        if not channel:
+            return {
+                "success": False,
+                "error": "Channel không tồn tại"
+            }
+
+        if channel.owner_email != owner_email:
+            return {
+                "success": False,
+                "error": "Chỉ chủ channel mới có thể xóa tin nhắn"
+            }
+
+        result = await self.messages_col.delete_one({
+            "message_id": message_id,
+            "channel_id": channel_id
+        })
+
+        if result.deleted_count <= 0:
+            return {
+                "success": False,
+                "error": "Không thể xóa tin nhắn"
+            }
+
+        return {
+            "success": True,
+            "message_id": message_id,
+            "room_id": message.get("room_id"),
+            "channel_id": channel_id
+        }
 
 channel_service = ChannelService()
