@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from controllers import ai_controller, announce_controller, ban_controller, comment_controller, complaint_controller, incident_report_controller, message_controller, policy_controller, post_controller, post_saved_controller, report_controller, search_controller, story_controller
+from controllers import ai_controller, announce_controller, ban_controller, comment_controller, complaint_controller, incident_report_controller, message_controller, policy_controller, post_catalog_controller, post_controller, post_saved_controller, report_controller, search_controller, story_controller
 from controllers import account_controller
 from core.database import init_db 
 from controllers import file_controller
@@ -62,6 +62,7 @@ app.include_router(incident_report_controller.router, prefix="/incident_report",
 app.include_router(websocket_router)
 
 app.include_router(post_saved_controller.router, prefix="/post_saved", tags=["post_saved"])
+app.include_router(post_catalog_controller.router, prefix="/post_catalog", tags=["post_catalog"])
 
 
 #Meeting

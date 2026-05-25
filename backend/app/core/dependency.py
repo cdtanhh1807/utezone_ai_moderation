@@ -6,6 +6,7 @@ from services.impls.complaint_service_impl import ComplaintServiceImpl
 from services.impls.incident_report_service_impl import IncidentReportServiceImpl
 from services.impls.message_service_impl import MessageServiceImpl
 from services.impls.policy_service_impl import PolicyServiceImpl
+from services.impls.post_catalog_service_impl import PostCatalogServiceImpl
 from services.impls.post_saved_service_impl import PostSavedServiceImpl
 from services.impls.report_service_impl import ReportServiceImpl
 from services.impls.search_service_impl import SearchServiceImpl
@@ -18,6 +19,7 @@ from services.interfaces.complaint_service_interface import IComplaintService
 from services.interfaces.incident_report_service_interface import IIncidentReportService
 from services.interfaces.message_service_interface import IMessageService
 from services.interfaces.policy_service_interface import IPolicyService
+from services.interfaces.post_catalog_service_interface import IPostCatalogService
 from services.interfaces.post_saved_service_interface import IPostSavedService
 from services.interfaces.post_service_interface import IPostService
 from services.impls.post_service_impl import PostServiceImpl
@@ -68,3 +70,6 @@ def get_post_saved_service() -> IPostSavedService:
 
 def get_incident_report_service() -> IIncidentReportService:
     return IncidentReportServiceImpl()
+
+def get_post_catalog_service() -> IPostCatalogService:
+    return PostCatalogServiceImpl()
