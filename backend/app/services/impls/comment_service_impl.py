@@ -58,7 +58,7 @@ class CommentServiceImpl(ICommentService):
             acc_tp: Account = Account(**bson_to_dict(dic_acc_tp))
             contentAnnounce: str = str(acc_tp.userInfo.fullName) + " đã bình luận bài viết của bạn"
             announce = Announce(senderEmail=user_id, receiverEmail=post.createdBy, type="comment", contentAnnounce=contentAnnounce,
-                                 isRead=False, createdAt=datetime.now(timezone.utc), contentId=new_comment.get("commentId"),
+                                 isRead=False, createdAt=datetime.now(), contentId=new_comment.get("commentId"),
                                  contentParentId=str(post.id), content=new_comment.get("content"))
             dic_announce_insert = await AnnounceRepository.insert(announce.model_dump())
             if dic_announce_insert:

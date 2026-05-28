@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional, List
 from datetime import datetime, timezone
 from models.post_model import PollData
@@ -7,7 +7,7 @@ from models.post_model import PollData
 class SharePostRequest(BaseModel):
     title: Optional[str] = None
     content: Optional[str] = None
-    createdAt: Optional[datetime] = datetime.now(timezone.utc)
+    createdAt: Optional[datetime] = Field(default_factory=datetime.now)
     postType: Optional[str] = None              # long | short
     visibility: Optional[str] = None
     status: Optional[str] = None

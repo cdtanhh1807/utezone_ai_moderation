@@ -22,7 +22,7 @@ class CrawlImportService:
             post_request = await self.converter.convert(crawl_doc)
             
             # Thêm vào DB qua service có sẵn
-            result = await self.post_service.add(post_request)
+            result = await self.post_service.add_from_crawl(post_request)
             return result
             
         except Exception as e:
@@ -52,7 +52,7 @@ class CrawlImportService:
 # Dependency
 def get_crawl_converter():
     # Cấu hình URL upload (có thể lấy từ settings)
-    return CrawlToPostConverter(upload_endpoint="http://localhost:8000/file/upload")
+    return CrawlToPostConverter(upload_endpoint="http://localhost:8000/file/upload_from_crawl")
 
 @router.post("/import_single", response_model=AddPostResponse)
 async def import_crawled_post(

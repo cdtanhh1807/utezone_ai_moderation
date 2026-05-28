@@ -42,6 +42,13 @@ from dto.ai.request.moderate_content_request import ModerateContentRequest
 
 class PostServiceImpl(IPostService):
 
+    async def add_from_crawl(self, post_req: AddPostRequest) -> Optional[AddPostResponse]:
+        new_post = await PostRepository.insert(post_req.model_dump())
+        if new_post:
+            return AddPostResponse(success=True, message="Completed")
+        else:
+            return AddPostResponse(success=False, message="Failed to add post")
+        
     async def add(self, post_req: AddPostRequest) -> Optional[AddPostResponse]:
         title = post_req.title.strip() if post_req.title else ""
         content = post_req.content.strip() if post_req.content else ""

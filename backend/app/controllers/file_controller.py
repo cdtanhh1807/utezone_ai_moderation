@@ -353,3 +353,9 @@ async def upload_batch(files: list[UploadFile] = File(...)):
 @router.get("/file/{file_id}")
 async def get_file(file_id: str):
     return {"url": FileService.get_file_url(file_id)}
+
+@router.post("/upload_from_crawl")
+async def upload_file(file: UploadFile = File(...)):
+    file_id = await FileService.upload_file(file)
+    return {"file_id": file_id, "url": FileService.get_file_url(file_id)}
+

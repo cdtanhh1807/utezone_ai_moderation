@@ -1,6 +1,6 @@
 from typing import Optional, List
 from datetime import datetime
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from bson import ObjectId
 
 
@@ -14,7 +14,7 @@ class SendReportRequest(BaseModel):
     path: Optional[str] = None
     content: Optional[str] = None
     description: Optional[str] = None
-    reportedAt: datetime = datetime.now()
+    reportedAt: datetime = Field(default_factory=datetime.now)
     check: bool = False
 
     class Config:
